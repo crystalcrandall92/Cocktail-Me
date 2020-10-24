@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": ,
+    "password": "",
     "database": "blogger",
     "host": "127.0.0.1",
     "dialect": "mysql"

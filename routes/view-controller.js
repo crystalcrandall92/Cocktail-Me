@@ -4,33 +4,30 @@
 
 // Dependencies
 // =============================================================
-const path = require("path");
 const router = require('express').Router();
-const db = require("../models");
 
 // Routes
 // =============================================================
 // Each of the below routes just handles the HTML page that the user gets sent to.
 
 router.get('/', function(req, res) {
-  res.render('index')
+  res.render('signup')
 })
 
 router.get('/login', function(req, res) {
   res.render('login')
 })
 
-router.get('/createaccount', function(req, res) {
-  res.render('createaccount')
+router.get('/signup', function(req, res) {
+  res.render('signup')
 })
 
-// cms route loads cms.html
-router.get("/cms", function (req, res) {
-  res.render('cms');
-});
+router.get('/members', function(req, res) {
+  res.render('members')
+})
 
-router.get("/authors", function (req, res) {
-  res.render('authors');
-});
+router.get('/drinks', function(req, res) {
+  res.render('drinks')
+})
 
 module.exports = router;
