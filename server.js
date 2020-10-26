@@ -12,7 +12,7 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
@@ -26,19 +26,11 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Routes
-// =============================================================
-// require("/routes/login-controller.js")(app);
-const viewController = require("./routes/view-controller.js");
-// const loginController = require("./routes/login-controller.js");
-app.use(viewController);
-// console.log(loginController())
-
-// app.use(loginController)
+app.use(require('./routes'))
 
 // Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
 });
