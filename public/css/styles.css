@@ -2,3 +2,126 @@
   padding-top: 50px;
 }
 
+    html,
+body,
+header,
+.view {
+  height: 100%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+font-family: 'Commissioner', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+  color: white;
+}
+
+h5 {
+  letter-spacing: 3px;
+  color: white;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../img/elliott-blair-V12QmVEMXlU-unsplash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+body {
+  background: #ffd89b;
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+  background: linear-gradient(to right, #ffd89b, #19547b);
+  min-height: 100vh;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.card {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        opacity: .6;
+        font-weight: bold;
+        width: 50%;
+        justify-content: center
+    }
+    .card-header {
+      background-color: white;
+    }
+    .form-group {
+      border-bottom: thin solid black;
+    }
+    i {
+      padding: 5px;
+    }
+    .btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.btn:hover::after {
+    width: 100%;
+    transition: width .3s;
+}

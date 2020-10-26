@@ -1,144 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us" class="has-navbar-fixed-top">
-
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&family=Commissioner:wght@300&family=Oswald:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <style>
-    html,
-body,
-header,
-.view {
-  height: 100%;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-font-family: 'Commissioner', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Raleway', sans-serif;
-}
-
-@media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 100vh;
-  }
-}
-
-.top-nav-collapse {
-  background-color: #78909c !important;
-}
-
-.navbar:not(.top-nav-collapse) {
-  background: transparent !important;
-}
-
-@media (max-width: 991px) {
-  .navbar:not(.top-nav-collapse) {
-    background: #78909c !important;
-  }
-}
-
-h1 {
-  letter-spacing: 8px;
-  color: white;
-}
-
-h5 {
-  letter-spacing: 3px;
-  color: white;
-}
-
-.hr-light {
-  border-top: 3px solid #fff;
-  width: 80px;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-.form-control:focus {
-  box-shadow: none;
-}
-
-.form-control-underlined {
-  border-width: 0;
-  border-bottom-width: 1px;
-  border-radius: 0;
-  padding-left: 0;
-}
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*
-*/
-
-body {
-  background: #ffd89b;
-  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
-  background: linear-gradient(to right, #ffd89b, #19547b);
-  min-height: 100vh;
-}
-
-.form-control::placeholder {
-  font-size: 0.95rem;
-  color: #aaa;
-}
-
-.card {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        opacity: .6;
-        font-weight: bold;
-        width: 50%;
-        justify-content: center
-    }
-    .card-header {
-      background-color: white;
-    }
-    .form-group {
-      border-bottom: thin solid black;
-    }
-    i {
-      padding: 5px;
-    }
-    .btn::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
-}
-
-.btn:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
-    
-
-</style>
-
-</head>
-
-<body>
+nav
     <header>
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
@@ -150,26 +10,26 @@ body {
           <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/views/drinks.handlebars">Home</a>
+                    <a class="nav-link" href="/drinks">Home</a>
                 </li>
               <li class="nav-item">
-                <a class="nav-link" href="/views/searchdrinks.handlebars">Drink Search</a>
+                <a class="nav-link" href="/searchdrinks">Drink Search</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/views/createdrinks.handlebars">Create Drink</a>
+                <a class="nav-link" href="/createdrinks">Create Drink</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/views/saveddrinks.handlebars">Your Drinks</a>
+                <a class="nav-link" href="/saveddrinks">Your Drinks</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/views/login.handlebars">Log In or Sign up</a>
+                <a class="nav-link" href="/login">Log In or Sign up</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <!-- Full Page Intro -->
-      <div class="view" style="background-image: url('elliott-blair-V12QmVEMXlU-unsplash.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <div class="view bg">
         <!-- Mask & flexbox options-->
         <div class="mask rgba-black-light align-items-center">
           <!-- Content -->
@@ -208,16 +68,9 @@ body {
                 </form>
               </div>
               </div>
-              </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </header>
-
-</body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-
-</html>

@@ -27,10 +27,13 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
+// require("/routes/login-controller.js")(app);
 const viewController = require("./routes/view-controller.js");
-const loginController = require("./routes/login-controller.js");
+// const loginController = require("./routes/login-controller.js");
 app.use(viewController);
-app.use(loginController)
+// console.log(loginController())
+
+// app.use(loginController)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
