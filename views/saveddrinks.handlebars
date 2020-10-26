@@ -97,43 +97,23 @@ body {
 .form-control::placeholder {
   font-size: 0.95rem;
   color: #aaa;
+  font-style: italic;
 }
-.card {
+
+.list-group {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
         opacity: .6;
         font-weight: bold;
         width: 50%;
+        justify-content: center
     }
-    .card-header {
-      background-color: white;
-    }
-    form {
-      border-bottom: thin solid black;
 
-    }
-    i {
-      padding: 5px;
-    }
-    .btn::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
-}
 
-.btn:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
-a {
-  color: black;
-}
+
 
 </style>
 
@@ -159,10 +139,10 @@ a {
               <li class="nav-item">
                 <a class="nav-link" href="createdrinkdummy.html">Create Drink</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="saveddrinkdummy.html">Your Drinks</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="logindummy.html">Log In or Sign up</a>
               </li>
             </ul>
@@ -174,36 +154,14 @@ a {
         <!-- Mask & flexbox options-->
         <div class="mask rgba-black-light align-items-center">
           <!-- Content -->
-          <div class="card">
-            <div class="card-header text-center" style="border:none">
-              Enter email address
-            </div>
-            <div class="card-body w-75">
-            <form>
-              <div class="form-group">
-                <input type="email" style="border:none" class="form-control" id="userEmail" placeholder="Enter email address here">
-              </div>
-            </form>
-            <small><em>We'll never share your email with anyone else</em></small>
-            </div>
-            <div class="card-header text-center" style="border:none">
-              Enter password
-            </div>
-            <div class="card-body w-75">
-            <form>
-              <div class="form-group">
-                <input type="password" style="border:none" class="form-control" id="userPassword" placeholder="Enter password here">
-              </div>
-            </form>
-            <br>
-            <button type="submit" class="btn" id="logInBtn"><i class="fa fa-sign-in" aria-hidden="true"></i><strong>Log In</strong></button>
-            <button type="submit" class="btn" id="signUpPageBtn"><i class="fa fa-user-plus" aria-hidden="true"></i><a href="signupdummy.html"><strong>Sign Up</strong></a></button>
+          <div class="container">
+          <ul class="list-group">
+            <h3 class="list-group-item-heading" style="color:white">Your Drinks</h3>
+            <li class="list-group-item">Margarita</li>
+            <li class="list-group-item">Long Island Iced Tea</li>
+            <li class="list-group-item">Old Fashioned</li>
+          </ul>
           </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </header>
 
 </body>
 

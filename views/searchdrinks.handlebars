@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us" class="has-navbar-fixed-top">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&family=Commissioner:wght@300&family=Oswald:wght@700&family=Raleway:wght@300&display=swap"
+    rel="stylesheet">
+  <style>
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-family: 'Commissioner', sans-serif;
+      font-family: 'Oswald', sans-serif;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .view {
+        height: 100vh;
+      }
+    }
+
+    .top-nav-collapse {
+      background-color: #78909c !important;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+      background: transparent !important;
+    }
+
+    @media (max-width: 991px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #78909c !important;
+      }
+    }
+
+    h1 {
+      letter-spacing: 8px;
+      color: white;
+    }
+
+    h5 {
+      letter-spacing: 3px;
+      color: white;
+    }
+
+    .hr-light {
+      border-top: 3px solid #fff;
+      width: 80px;
+    }
+
+    .bg {
+      background-image: url("elliott-blair-V12QmVEMXlU-unsplash.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        opacity: .6;
+        font-weight: bold;
+        width: 50%;
+    }
+    .card-header {
+      background-color: white;
+    }
+    form {
+      border-bottom: thin solid black;
+    }
+.btn {
+  background: none;
+  border: none;
+  color:black;
+  font-size: 16px;
+  cursor: pointer;
+}
+label { 
+            float: right; 
+        } 
+          
+        span { 
+            display: block; 
+            overflow: hidden; 
+            padding: 0px 4px 0px 6px; 
+        } 
+
+
+
+  </style>
+
+<!--
+  <script>
+    $(document).ready(function(){
+  var keyword = "";
+  var resultArea = $("#results");
+  var searchBar = $("#searchBar");
+  var searchButton = $(".glyphicon-search");
+  var searchUrl = "https://en.wikipedia.org/w/api.php";
+  var displayResults = function(){
+    $.ajax({
+      url: searchUrl,
+      dataType: 'jsonp',
+      data: {
+        action: 'query',
+        format: 'json',
+        generator: 'search',
+          gsrsearch: keyword,
+          gsrnamespace: 0,
+          gsrlimit: 10,
+        prop:'extracts|pageimages',
+          exchars: 200,
+          exlimit: 'max',
+          explaintext: true,
+          exintro: true,
+          piprop: 'thumbnail',
+          pilimit: 'max',
+          pithumbsize: 200
+      },
+      success: function(json){
+        var results = json.query.pages;
+        $.map(results, function(result){
+          var link = "http://en.wikipedia.org/?curid="+result.pageid;
+          var elem1 = $('<a>');
+          elem1.attr("href",link);
+          elem1.attr("target","_blank");
+          var elem2 = $('<li>');
+          elem2.append($('<h3>').text(result.title));
+          //if(result.thumbnail) elem.append($('<img>').attr('width',150).attr('src',result.thumbnail.source));
+          elem2.append($('<p>').text(result.extract));
+          elem1.append(elem2);
+          resultArea.append(elem1);
+        });
+        $("footer").append("<p>----x--------x----</p>");
+      }
+    });   
+  };
+ /* 
+  searchBar.autocomplete({
+        source: function (request, response) {
+            $.ajax({
+                url: searchUrl,
+                dataType: 'jsonp',
+                data: {
+                    'action': "opensearch",
+                    'format': "json",
+                    'search': request.term
+                },
+                success: function (data) {
+                    response(data[1]);
+                }
+            });
+        }
+    });
+  */
+  searchButton.click(function(){
+    keyword = searchBar.val();
+    resultArea.empty();
+    $("footer").empty();
+    displayResults(); 
+    $("#searchBox").animate({'padding-top':"0"}, 600);
+    $(".container-fluid").animate({height:"30vh"}, 600);
+  });
+  
+  searchBar.keypress(function(e){
+      if(e.keyCode==13)
+      $(searchButton).click();
+  });
+
+});
+  </script>
+
+-->
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="mainpagedrinksdummy.html"><strong>Cocktail Application</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="mainpagedrinksdummy.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="searchdrinkdummy.html">Drink Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="createdrinkdummy.html">Create Drink</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saveddrinkdummy.html">Your Drinks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logindummy.html">Log In or Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Full Page Intro -->
+    <div class="view"
+      style="background-image: url('elliott-blair-V12QmVEMXlU-unsplash.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-black-light align-items-center">
+        <!-- Content -->
+        <div class="card">
+          <div class="card-header text-center" style="border:none">
+            Search by drink name
+          </div>
+          <div class="card-body w-75">
+          <form>
+            <div class="form-group">
+              <label for="searchDrinkBtn">
+                <button class="btn" id="searchIngredientBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </label>
+              <span>
+              <input name="searchDrinkBtn" type="search" style="border:none" class="form-control" id="searchByDrinkName" placeholder="Enter drink name here">
+            </span>
+            </div>
+          </form>
+          </div>
+          <div class="card-header text-center" style="border:none">
+            Search by ingredient
+          </div>
+          <div class="card-body w-75">
+          <form>
+            <div class="form-group">
+              <label for="searchDrinkBtn">
+                <button class="btn" id="searchIngredientBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </label>
+              <span>
+              <input type="search" style="border:none" class="form-control" id="searchByIngredient" placeholder="Enter ingredient here">
+            </span>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
+
+</html>

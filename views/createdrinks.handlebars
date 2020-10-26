@@ -98,22 +98,23 @@ body {
   font-size: 0.95rem;
   color: #aaa;
 }
+
 .card {
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
         opacity: .6;
         font-weight: bold;
         width: 50%;
+        justify-content: center
     }
     .card-header {
       background-color: white;
     }
-    form {
+    .form-group {
       border-bottom: thin solid black;
-
     }
     i {
       padding: 5px;
@@ -131,9 +132,7 @@ body {
     width: 100%;
     transition: width .3s;
 }
-a {
-  color: black;
-}
+    
 
 </style>
 
@@ -156,13 +155,13 @@ a {
               <li class="nav-item">
                 <a class="nav-link" href="searchdrinkdummy.html">Drink Search</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="createdrinkdummy.html">Create Drink</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="createdrinksdummy.html">Create Drink</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="saveddrinkdummy.html">Your Drinks</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="logindummy.html">Log In or Sign up</a>
               </li>
             </ul>
@@ -174,33 +173,44 @@ a {
         <!-- Mask & flexbox options-->
         <div class="mask rgba-black-light align-items-center">
           <!-- Content -->
-          <div class="card">
-            <div class="card-header text-center" style="border:none">
-              Enter email address
-            </div>
-            <div class="card-body w-75">
-            <form>
-              <div class="form-group">
-                <input type="email" style="border:none" class="form-control" id="userEmail" placeholder="Enter email address here">
+          <div class="container">
+            <div class="card">
+              <div class="card-header text-center" style="border:none">
+                <h4>Create a drink</h4>
               </div>
-            </form>
-            <small><em>We'll never share your email with anyone else</em></small>
-            </div>
-            <div class="card-header text-center" style="border:none">
-              Enter password
-            </div>
-            <div class="card-body w-75">
-            <form>
-              <div class="form-group">
-                <input type="password" style="border:none" class="form-control" id="userPassword" placeholder="Enter password here">
+              <div class="card-body w-75">  
+                <form class="createdrink">
+                  <div class="form-group">
+                    <label for="drinkname">Drink Name</label>
+                    <input type="text" style="border:none" class="form-control" id="drinknameinput" placeholder="Enter your drink name here">
+                  </div>
+                  <div class="form-group">
+                    <label for="examplespirit1">Spirit 1</label>
+                    <input type="text" style="border:none" class="form-control" id="spirit1input" placeholder="Enter 1st spirit here">
+                  </div>
+                  <div class="form-group">
+                    <label for="examplespirit2">Spirit 2 (optional)</label>
+                    <input type="text" style="border:none" class="form-control" id="spirit2input" placeholder="Enter 2nd spirit here (optional)">
+                  </div>
+                  <div class="form-group">
+                    <label for="Enteringredient1">Ingredient</label>
+                    <input type="text" style="border:none" class="form-control" id="ingredient1input" placeholder="Enter ingredient here">
+                  </div>
+                  <div class="form-group">
+                    <label for="Enteringredient2">Ingredient</label>
+                    <input type="text" style="border:none" class="form-control" id="ingredient2input" placeholder="Enter ingredient here">
+                  </div>
+                  <div class="form-group">
+                    <label for="Enterdirections">Directions</label>
+                    <input type="text" style="border:none" class="form-control" id="directionsinput" placeholder="Enter directions here">
+                  </div>
+                  <button type="submit" style="border:thin" class="btn" id="createDrinkBtn"><i class="fa fa-plus" aria-hidden="true"></i><strong>Create</strong></button>
+                </form>
               </div>
-            </form>
-            <br>
-            <button type="submit" class="btn" id="logInBtn"><i class="fa fa-sign-in" aria-hidden="true"></i><strong>Log In</strong></button>
-            <button type="submit" class="btn" id="signUpPageBtn"><i class="fa fa-user-plus" aria-hidden="true"></i><a href="signupdummy.html"><strong>Sign Up</strong></a></button>
+              </div>
+              </div>
+            </div>
           </div>
-          </div>
-        </div>
         </div>
       </div>
     </header>
