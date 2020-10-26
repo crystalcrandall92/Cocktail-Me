@@ -27,5 +27,5 @@ router.get('/saveddrinks', function(req, res) {
 })
 router.get('/searchdrinks', function(req, res) {
   res.render('searchdrinks')
-
+})
 module.exports = router;
