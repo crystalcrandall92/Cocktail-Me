@@ -12,7 +12,7 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
@@ -27,10 +27,13 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
+// require("/routes/login-controller.js")(app);
 const viewController = require("./routes/view-controller.js");
-const loginController = require("./routes/login-controller.js");
+// const loginController = require("./routes/login-controller.js");
 app.use(viewController);
-app.use(loginController)
+// console.log(loginController())
+
+// app.use(loginController)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

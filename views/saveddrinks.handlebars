@@ -97,41 +97,23 @@ body {
 .form-control::placeholder {
   font-size: 0.95rem;
   color: #aaa;
+  font-style: italic;
 }
 
-.card {
+.list-group {
         position: absolute;
-        top: 55%;
+        top: 45%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
         opacity: .6;
         font-weight: bold;
         width: 50%;
+        justify-content: center
     }
-    .card-header {
-      background-color: white;
-    }
-    form {
-      border-bottom: thin solid black;
 
-    }
-    i {
-      padding: 5px;
-    }
-    .btn::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
-}
 
-.btn:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
+
 
 </style>
 
@@ -157,10 +139,10 @@ body {
               <li class="nav-item">
                 <a class="nav-link" href="/views/createdrinks.handlebars">Create Drink</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="/views/saveddrinks.handlebars">Your Drinks</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/views/login.handlebars">Log In or Sign up</a>
               </li>
             </ul>
@@ -172,44 +154,14 @@ body {
         <!-- Mask & flexbox options-->
         <div class="mask rgba-black-light align-items-center">
           <!-- Content -->
-          <div class="card">
-            <div class="card-body w-75">
-            <form>
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" style="border:none" class="form-control" id="userFirstName" placeholder="Enter first name here">
-              </div>
-            </form>
-            <br>
-            <form>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" style="border:none" class="form-control" id="userLastName" placeholder="Enter last name here">
-              </div>
-            </form>
-            <br>
-            <form>
-              <div class="form-group">
-                <label for="emailAddress">Email Address</label>
-                <input type="email" style="border:none" class="form-control" id="userSignUpEmail" placeholder="Enter email address here">
-              </div>
-            </form>
-            <small><em>We'll never share your email with anyone else</em></small>
-          <br>
-          <br>
-            <form>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" style="border:none" class="form-control" id="userPassword" placeholder="Enter password here">
-              </div>
-            </form>
-            <br>
-            <button type="submit" class="btn" id="signUpPageBtn"><i class="fa fa-user-plus" aria-hidden="true"></i><strong>Sign Up</strong></a></button>
+          <div class="container">
+          <ul class="list-group">
+            <h3 class="list-group-item-heading" style="color:white">Your Drinks</h3>
+            <li class="list-group-item">Margarita</li>
+            <li class="list-group-item">Long Island Iced Tea</li>
+            <li class="list-group-item">Old Fashioned</li>
+          </ul>
           </div>
-          </div>
-        </div>
-      </div>
-    </header>
 
 </body>
 
