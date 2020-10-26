@@ -11,23 +11,21 @@ const router = require('express').Router();
 // Each of the below routes just handles the HTML page that the user gets sent to.
 
 router.get('/', function(req, res) {
-  res.render('signup')
+  res.render('drinks')
 })
-
 router.get('/login', function(req, res) {
   res.render('login')
 })
-
 router.get('/signup', function(req, res) {
   res.render('signup')
 })
-
-router.get('/members', function(req, res) {
-  res.render('members')
+router.get('/createdrinks', function(req, res) {
+  res.render('createdrinks')
 })
-
-router.get('/drinks', function(req, res) {
-  res.render('drinks')
+router.get('/saveddrinks', function(req, res) {
+  res.render('saveddrinks')
 })
+router.get('/searchdrinks', function(req, res) {
+  res.render('searchdrinks')
 
 module.exports = router;
