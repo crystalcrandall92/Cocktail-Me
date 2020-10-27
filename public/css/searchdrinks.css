@@ -1,0 +1,94 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Commissioner', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 740px) {
+
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+  color: white;
+}
+
+h5 {
+  letter-spacing: 3px;
+  color: white;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+.bg {
+  background-image: url("../img/elliott-blair-V12QmVEMXlU-unsplash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  opacity: .6;
+  font-weight: bold;
+  width: 50%;
+}
+
+.card-header {
+  background-color: white;
+}
+
+form {
+  border-bottom: thin solid black;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+label {
+  float: right;
+}
+
+span {
+  display: block;
+  overflow: hidden;
+  padding: 0px 4px 0px 6px;
+}

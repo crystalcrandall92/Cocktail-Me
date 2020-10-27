@@ -1,8 +1,4 @@
-.createAccountForm {
-  padding-top: 50px;
-}
-
-    html,
+html,
 body,
 header,
 .view {
@@ -52,7 +48,6 @@ h5 {
 }
 
 .bg {
-  /* The image used */
   background-image: url("../img/elliott-blair-V12QmVEMXlU-unsplash.jpg");
   height: 100%;
   background-position: center;
@@ -72,21 +67,6 @@ h5 {
   padding-left: 0;
 }
 
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*
-*/
-
-body {
-  background: #ffd89b;
-  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
-  background: linear-gradient(to right, #ffd89b, #19547b);
-  min-height: 100vh;
-}
-
 .form-control::placeholder {
   font-size: 0.95rem;
   color: #aaa;
@@ -101,13 +81,13 @@ body {
         opacity: .6;
         font-weight: bold;
         width: 50%;
-        justify-content: center
     }
     .card-header {
       background-color: white;
     }
-    .form-group {
+    form {
       border-bottom: thin solid black;
+
     }
     i {
       padding: 5px;

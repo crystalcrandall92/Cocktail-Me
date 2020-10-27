@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Hol@senior2556",
+    "password": "",
     "database": "drink_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
