@@ -43,11 +43,6 @@ class Drink {
     }
 }
 
-// var drinkName = "margarita"
-
-// searchDrink(drinkName)
-
-// Axios call to cocktail DB to look drinks up by NAME OF DRINK
 function searchDrink(drinkName) {
     $.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=` + drinkName)
         .then(function ({ drinks }) {
@@ -58,7 +53,84 @@ function searchDrink(drinkName) {
 
                 const parent = $("<div>")
                 const name = $("<h3>").text(newDrink.name)
-                const img = $("<img>").attr("src", newDrink.image).css("height", "75px")
+                const img = $("<img>").attr("src", newDrink.image).css("height", "125px")
+                const instructions = $("<p>").text(newDrink.instructions)
+
+                const ingrList = $("<ul>")
+
+                for (const ingr of newDrink.ingredients) {
+                    const item = $("<li>").text(ingr.measure + ": " + ingr.ingredient)
+                    ingrList.append(item)
+                }
+
+                parent.append(name, img, instructions, ingrList)
+                DrinkContainer.append(parent)
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+$("#searchIngBtn").on("click", function (event) {
+    event.preventDefault();
+    drinkIng = $("#drinkIngSearch").val();
+    $("#drinkIngSearch").val("");
+    console.log("go")
+    searchIng(drinkIng);
+
+})
+
+function searchIng(drinkIng) {
+    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=` + drinkIng)
+        .then(function ({ drinks }) {
+            console.log(drinks)
+            DrinkContainer.empty();
+            for (const drink of drinks) {
+                const newDrink = new Drink(drink);
+
+                const parent = $("<div>")
+                const name = $("<h3>").text(newDrink.name)
+                const img = $("<img>").attr("src", newDrink.image).css("height", "125px")
+                const instructions = $("<p>").text(newDrink.instructions)
+
+                const ingrList = $("<ul>")
+
+                for (const ingr of newDrink.ingredients) {
+                    const item = $("<li>").text(ingr.measure + ": " + ingr.ingredient)
+                    ingrList.append(item)
+                }
+
+                parent.append(name, img, instructions, ingrList)
+                DrinkContainer.append(parent)
+            }
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+
+$("#RandomBtn").on("click", function (event) {
+    event.preventDefault();
+    console.log("go")
+    randomDrink();
+
+})
+
+function  randomDrink() {
+    $.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+        .then(function ({ drinks }) {
+            console.log(drinks)
+            DrinkContainer.empty();
+            for (const drink of drinks) {
+                const newDrink = new Drink(drink);
+
+                const parent = $("<div>")
+                const name = $("<h3>").text(newDrink.name)
+                const img = $("<img>").attr("src", newDrink.image).css("height", "125px")
                 const instructions = $("<p>").text(newDrink.instructions)
 
                 const ingrList = $("<ul>")
