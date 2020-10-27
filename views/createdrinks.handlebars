@@ -1,76 +1,84 @@
-nav
-    <header>
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="/views/drinks.handlebars"><strong>Cocktail Application</strong></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/drinks">Home</a>
-                </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/searchdrinks">Drink Search</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/createdrinks">Create Drink</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/saveddrinks">Your Drinks</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Log In or Sign up</a>
-              </li>
-            </ul>
+<link rel="stylesheet" href="/css/createdrinks.css">
+<header>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/"><strong>Cocktail Application</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+        aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="searchdrinks">Drink Search</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="createdrinks">Create Drink</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="saveddrinks">Your Drinks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">Log In or Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Full Page Intro -->
+  <div class="view bg">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <div class="card">
+          <div class="card-header text-center" style="border:none">
+            <h2>Create a drink</h2>
           </div>
-        </div>
-      </nav>
-      <!-- Full Page Intro -->
-      <div class="view bg">
-        <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-light align-items-center">
-          <!-- Content -->
-          <div class="container">
-            <div class="card">
-              <div class="card-header text-center" style="border:none">
-                <h4>Create a drink</h4>
+          <div class="card-body w-75">
+            <form class="createdrink">
+              <div class="form-group">
+                <label for="drinkname">Drink Name</label>
+                <input type="text" style="border:none" class="form-control" id="drinknameinput"
+                  placeholder="Enter your drink name here">
               </div>
-              <div class="card-body w-75">  
-                <form class="createdrink">
-                  <div class="form-group">
-                    <label for="drinkname">Drink Name</label>
-                    <input type="text" style="border:none" class="form-control" id="drinknameinput" placeholder="Enter your drink name here">
-                  </div>
-                  <div class="form-group">
-                    <label for="examplespirit1">Spirit 1</label>
-                    <input type="text" style="border:none" class="form-control" id="spirit1input" placeholder="Enter 1st spirit here">
-                  </div>
-                  <div class="form-group">
-                    <label for="examplespirit2">Spirit 2 (optional)</label>
-                    <input type="text" style="border:none" class="form-control" id="spirit2input" placeholder="Enter 2nd spirit here (optional)">
-                  </div>
-                  <div class="form-group">
-                    <label for="Enteringredient1">Ingredient</label>
-                    <input type="text" style="border:none" class="form-control" id="ingredient1input" placeholder="Enter ingredient here">
-                  </div>
-                  <div class="form-group">
-                    <label for="Enteringredient2">Ingredient</label>
-                    <input type="text" style="border:none" class="form-control" id="ingredient2input" placeholder="Enter ingredient here">
-                  </div>
-                  <div class="form-group">
-                    <label for="Enterdirections">Directions</label>
-                    <input type="text" style="border:none" class="form-control" id="directionsinput" placeholder="Enter directions here">
-                  </div>
-                  <button type="submit" style="border:thin" class="btn" id="createDrinkBtn"><i class="fa fa-plus" aria-hidden="true"></i><strong>Create</strong></button>
-                </form>
+              <div class="form-group">
+                <label for="examplespirit1">Spirit 1</label>
+                <input type="text" style="border:none" class="form-control" id="spirit1input"
+                  placeholder="Enter 1st spirit here">
               </div>
+              <div class="form-group">
+                <label for="examplespirit2">Spirit 2 (optional)</label>
+                <input type="text" style="border:none" class="form-control" id="spirit2input"
+                  placeholder="Enter 2nd spirit here (optional)">
               </div>
-            </div>
-          </div>
+              <div class="form-group">
+                <label for="Enteringredient1">Ingredient</label>
+                <input type="text" style="border:none" class="form-control" id="ingredient1input"
+                  placeholder="Enter ingredient here">
+              </div>
+              <div class="form-group">
+                <label for="Enteringredient2">Ingredient</label>
+                <input type="text" style="border:none" class="form-control" id="ingredient2input"
+                  placeholder="Enter ingredient here">
+              </div>
+              <div class="form-group">
+                <label for="Enterdirections">Directions</label>
+                <input type="text" style="border:none" class="form-control" id="directionsinput"
+                  placeholder="Enter directions here">
+              </div>
+              <button type="submit" style="border:thin" class="btn" id="createDrinkBtn"><i class="fa fa-plus"
+                  aria-hidden="true"></i><strong>Create</strong></button>
+            </form>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+  </div>
+  </div>
+</header>
