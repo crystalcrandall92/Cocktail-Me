@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="/css/searchdrinks.css">
 
 <body>
@@ -43,12 +44,11 @@
           <form>
             <div class="form-group">
               <label for="searchDrinkBtn">
-                <button class="btn" id="searchIngredientBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="btn" id="searchDrinkBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
               </label>
               <span>
-                <input name="searchDrinkBtn" type="search" style="border:none" class="form-control"
-                  id="searchByDrinkName" placeholder="Enter drink name here">
-              </span>
+              <input name="drinkNameSearch" type="search" style="border:none" class="form-control" id="drinkNameSearch" placeholder="Enter drink name here">
+            </span>
             </div>
           </form>
         </div>
@@ -68,11 +68,14 @@
             </div>
           </form>
         </div>
+        </div>
       </div>
-    </div>
+      
+       <div id="newDrinkSearch" class="container"></div>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/signup.js"></script>
+<script type="text/javascript" src="js/drinks.js"></script>
 
 </html>
