@@ -73,19 +73,19 @@ function searchDrink(drinkName) {
         });
 }
 
-$("#searchIngBtn").on("click", function (event) {
+$("#searchIngredientBtn").on("click", function (event) {
     event.preventDefault();
-    drinkIng = $("#drinkIngSearch").val();
-    $("#drinkIngSearch").val("");
+    drinkIng = $("#searchByIngredient").val();
+    $("#searchByIngredient").val("");
     console.log("go")
     searchIng(drinkIng);
 
 })
 var ingSearchArray = [];
 
-function searchIng(searchIng) {
-    console.log(searchIng)
-    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=` + searchIng)
+function searchIng(drinkIng) {
+    console.log(drinkIng)
+    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=` + drinkIng)
         .then(function (res) {
             console.log(res)
             res.drinks.forEach(drink => ingSearchArray.push(drink.idDrink))
@@ -110,16 +110,11 @@ function searchIng(searchIng) {
                             parent.append(name, img, instructions, ingrList)
                             DrinkContainer.append(parent)
                         }
-                        console.log(drinks)
-                        console.log(ingSearchArray)
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
-            }
-        })
-        .catch(function (error) {
-            console.log(error);
+            };
         })
 }
 
