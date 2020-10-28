@@ -11,7 +11,7 @@ MIT License  (https://choosealicense.com)
 3. [Usage](#usage-information)
 4. [Contribution](#contribution-guidelines)
 5. [Test](#test-instructions)
-6. [Credits] (#Credits)
+6. [Credit](#credit)
 7. [Questions & Contact](#questions-and-contact-information-below)
 
 ### Description
