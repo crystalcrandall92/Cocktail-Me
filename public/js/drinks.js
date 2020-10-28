@@ -73,19 +73,19 @@ function searchDrink(drinkName) {
         });
 }
 
-$("#searchIngBtn").on("click", function (event) {
+$("#searchIngredientBtn").on("click", function (event) {
     event.preventDefault();
-    drinkIng = $("#drinkIngSearch").val();
-    $("#drinkIngSearch").val("");
+    drinkIng = $("#searchByIngredient").val();
+    $("#searchByIngredient").val("");
     console.log("go")
     searchIng(drinkIng);
-
 })
 var ingSearchArray = [];
 
-function searchIng(searchIng) {
-    console.log(searchIng)
-    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=` + searchIng)
+function searchIng(drinkIng) {
+    DrinkContainer.empty();
+    ingSearchArray = [];
+    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=` + drinkIng)
         .then(function (res) {
             console.log(res)
             res.drinks.forEach(drink => ingSearchArray.push(drink.idDrink))
@@ -95,7 +95,7 @@ function searchIng(searchIng) {
                 $.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=` + drinkID)
                     .then(function ({ drinks }) {
                         console.log(drinks)
-                        DrinkContainer.empty();
+                        // DrinkContainer.empty();
                         for (const drink of drinks) {
                             const newDrink = new Drink(drink);
                             const parent = $("<div>")
@@ -128,7 +128,6 @@ $("#RandomBtn").on("click", function (event) {
     event.preventDefault();
     console.log("go")
     randomDrink();
-
 })
 
 function randomDrink() {
@@ -159,4 +158,5 @@ function randomDrink() {
         .catch(function (error) {
             console.log(error);
         });
+
 }
