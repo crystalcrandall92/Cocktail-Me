@@ -1,4 +1,4 @@
-# Cocktail Application ![(https://img.shields.io/github/license/crystalcrandall92/project2)](https://img.shields.io/github/license/crystalcrandall92/project2)
+# Cocktail Application 
 
 
 
