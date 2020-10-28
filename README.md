@@ -29,7 +29,7 @@ See contact information
 ### Test Instructions
 Run "node server"
 
-### Credits
+### Credit
 Trilogy Education Services https://www.thecocktaildb.com/ https://bootstrapious.com https://getbootstrap.com/ https://unsplash.com https://mdbootstrap.com https://w3schools.com https://stackoverflow.com/
 
 ### Questions and Contact Information Below
