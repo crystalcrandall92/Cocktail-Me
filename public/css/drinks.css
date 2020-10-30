@@ -56,3 +56,8 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+img {
+  max-width: 25%;
+  height: auto;
+}
