@@ -7,6 +7,7 @@ header,
   font-family: 'Commissioner', sans-serif;
   font-family: 'Oswald', sans-serif;
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
 }
 
 @media (max-width: 740px) {
@@ -54,4 +55,9 @@ h5 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+img {
+  max-width: 25%;
+  height: auto;
 }
