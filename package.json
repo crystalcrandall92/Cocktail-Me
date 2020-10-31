@@ -5,21 +5,25 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "watch": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animejs": "^3.2.1",
+    "aos": "^2.3.4",
     "bcryptjs": "2.4.3",
     "body-parser": "^1.15.2",
     "bootstrap": "^4.5.3",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.16.1",
     "handlebars": "^4.7.6",
     "mysql2": "^1.7.0",
+    "nodemon": "^2.0.6",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.22.3"

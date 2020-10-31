@@ -49,4 +49,3 @@ passport.deserializeUser((obj, cb) => {
 
 // Exporting our configured passport
 module.exports = passport;
-

@@ -86,3 +86,7 @@ h5 {
   width: 50%;
   justify-content: center
 }
+
+.list-group-item-heading {
+  font-weight: bold;
+}

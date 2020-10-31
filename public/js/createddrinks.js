@@ -1,6 +1,7 @@
 var spiritInput = 2
 var ingredientInput = 2
 
+
 $('.add-spirit-btn').on("click", function(event){
     event.preventDefault()
     if (spiritInput <= 5) {
@@ -46,10 +47,10 @@ $(`#createDrinkBtn`).on("click", function(event) {
         instructions: directionsInput
     }
     console.log(newDrink)
-    //submitDrink(newDrink)
+    submitDrink(newDrink)
 })
 
 function submitDrink(drink) {
+    console.log("hello", drink)
     $.post("/api/createddrinks", drink) 
-        window.location.href = "createdrinks"
 }
