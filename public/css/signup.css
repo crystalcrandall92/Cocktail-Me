@@ -4,10 +4,10 @@ header,
 .view {
   height: 100%;
   font-family: 'Barlow Semi Condensed', sans-serif;
-font-family: 'Commissioner', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-size: 16px;
+  font-family: 'Commissioner', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
 }
 
 @media (max-width: 740px) {

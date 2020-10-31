@@ -11,13 +11,20 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
 
 router.post("/signup", (req, res) => {
   db.User.create({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
     password: req.body.password
   })
-    .then(() => {
-      res.redirect(307, "/login");
+    .then((user) => {
+      res.cookie('someonescookie', user)
+      res.status(201)
+      res.send("Successfully created user")
+      //res.redirect(307, "/saveddrinks");
+      console.log("oh hey there")
     })
     .catch(err => {
+      console.log(err, err.message)
       res.status(401).json(err);
     });
 });
