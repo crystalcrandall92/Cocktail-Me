@@ -4,10 +4,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        glass: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         ingredients: {
             type: DataTypes.STRING,
             allowNull: false
@@ -17,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         instructions: {
             type: DataTypes.STRING
+        },
+        userId: {
+            type: DataTypes.INTEGER
         }
     })
     return CreatedDrink;
