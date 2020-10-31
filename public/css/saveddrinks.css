@@ -57,39 +57,36 @@ h5 {
   background-size: cover;
 }
 
-.card {
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.list-group {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   opacity: .65;
   font-weight: bold;
   width: 50%;
+  justify-content: center
 }
 
-.card-header {
-  background-color: white;
-}
-
-form {
-  border-bottom: thin solid black;
-}
-
-.btn {
-  background: none;
-  border: none;
-  color: black;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-label {
-  float: right;
-}
-
-span {
-  display: block;
-  overflow: hidden;
-  padding: 0px 4px 0px 6px;
+.list-group-item-heading {
+  font-weight: bold;
 }
